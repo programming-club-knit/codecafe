@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - CodeCafe</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="32" height="32"> CodeCafe</a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">&#127763;</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Our menu</h1>
+
+    <form class="search" method="get" action="menu.html" role="search">
+      <input type="text" name="q" id="search" placeholder="Search the menu..." aria-label="Search the menu">
+      <button class="btn" type="submit">Search</button>
+    </form>
+    <p id="search-info" class="search-info"></p>
+
+    <div class="filters" id="filters">
+      <button class="chip active" data-category="all">All</button>
+      <button class="chip" data-category="drinks">Drinks</button>
+      <button class="chip" data-category="snacks">Snacks</button>
+      <button class="chip" data-category="dessert">Desserts</button>
+    </div>
+
+    <div id="status" class="status"></div>
+    <div id="menu-grid" class="grid"></div>
+  </main>
+
+  <button id="cart-open" class="btn cart-btn">&#128722; Cart (<span id="cart-count">0</span>)</button>
+
+  <div id="cart-drawer" class="drawer">
+    <div class="drawer-head">
+      <h2>Your cart</h2>
+      <div id="cart-close" class="close">&times;</div>
+    </div>
+    <ul id="cart-items" class="cart-items"></ul>
+    <p class="cart-total">Total: $<span id="cart-total">0</span></p>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2019 CodeCafe. Brewed with love and JavaScript.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

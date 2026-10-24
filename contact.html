@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="32" height="32"> CodeCafe</a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">&#127763;</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container narrow">
+    <h1>Say hello</h1>
+    <p>Catering, events or just a compliment for the barista? Drop us a line.</p>
+
+    <form id="contact-form" novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name">
+        <span class="error" data-for="name"></span>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="text" autocomplete="email">
+        <span class="error" data-for="email"></span>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+        <span class="error" data-for="message"></span>
+      </div>
+      <button class="btn" type="submit">Send message</button>
+      <p id="form-status" class="form-status"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2019 CodeCafe. Brewed with love and JavaScript.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
